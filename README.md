@@ -4,7 +4,7 @@ This folder contains code to fit the Gaussian process MTD model developed in the
 
 ## Packages
 
-Before running the .jl scripts, it is necessary to install the packages that appear after all instances of `using` in the .jl scripts. To do this, open the Julia REPL and enter package mode by pressing `]`. In package mode, enter `add` followed by each package name, separated by spaces. The *BayesInference*, *SparseProbVec*, and *MTD* packages can be installed with
+Before running the .jl scripts, it is necessary to install the packages that appear after all instances of `using` in the .jl scripts. To do this, open the Julia REPL and enter package mode by pressing `]`. In package mode, enter `add` followed by each package name, separated by spaces. The *BayesInference*, *SparseProbVec*, *MTD*, and *GPMTD* packages can be installed with
 
 ```julia
 pkg> add "https://github.com/mheiner/BayesInference.jl"
@@ -12,6 +12,8 @@ pkg> add "https://github.com/mheiner/BayesInference.jl"
 pkg> add "https://github.com/mheiner/SparseProbVec.jl"
 
 pkg> add "https://github.com/mheiner/MTD.jl"
+
+pkg> add "https://github.com/mheiner/GPMTD.jl"
 ```
 Other required packages include: *BSON*, *Dates*, *Distributed*, *PDMats*, *Plotly*, *Printf*, *Random*, *Random123*, *RCall*, *Statistics*, and *StatsBase*.
 
