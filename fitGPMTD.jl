@@ -92,9 +92,9 @@ adapt!(model, n_iter_collectSS=n_adapt, n_iter_scale=n_adapt,
 
 ## burn-in
 timestartburn = Dates.now()
-iter, accptr = mcmc!(model, n_burn, save=false, n_procs=n_procs,
-    report_filename=logfilename, report_freq=10000, update=updatevars)
-etr(timestartburn, n_keep, n_thin, logfilename)
+iter, accptr = mcmc!(model, n_burn, thin=1, save=false, n_procs=n_procs,
+    report_filename=logfilename, report_freq=10000, update=updatevars, tol_posdef=tol_posdef)
+etr(timestartburn, n_burn, n_keep, n_thin, logfilename)
 
 sims, accptr = mcmc!(model, n_keep, save=true, thin=n_thin,
     n_procs=n_procs,
